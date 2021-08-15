@@ -1,79 +1,105 @@
-//Author.java
-
-public class Author{
-    private String name;
-    private String email;
-    private char gender;
-    Author(String name,String email,char gender) {
+//
+class Author
+{
+    public String name;
+    public String Email;
+    public char gender;
+    public Author(){}
+    public Author(String name, String Email, char gender)
+    {
         this.name=name;
-        this.email=email;
+        this.Email=Email;
         this.gender=gender;
+
     }
-    public String getName(){
+    public String getname()
+    {
         return name;
+
     }
-    public void setEmail(String email){
-        this.email=email;
+
+    public String getEmail()
+    {
+        return Email;
     }
-    public String getEmail(){
-        return email;
+
+    public void setEmail(String Email)
+    {
+        this.Email=Email;
     }
-    public char getGender(){
+
+    public char getGender()
+    {
         return gender;
     }
-    public String toString(){
-        return "\"Author[name=" + getName() +", email=" + getEmail()+", gender="+ getGender()+" ]\"";
+
+    public String toString()
+    {
+        //System.out.println();
+       return "Author[name="+name+", email="+Email+", Gender="+gender;
     }
+    
 }
-
-//Book.java
-
-public class Book{
-    private String name;
-    private Author[] A1=new Author[2];
+class Book {
+    private String name_of_book;
     private double price;
     private int qty;
-    public Book(String name, Author[] author, double price) {
-        this.name=name;
-        A1=author;
+    public Author authors =new Author();
+         
+    public Book(String name_of_book, Author obj_of_Author, double price)
+    {
+        this.name_of_book=name_of_book;
         this.price=price;
+        this.authors=obj_of_Author;
     }
-    public Book (String name, Author[] author, double price, int qty)
-    { 
-        this(name,author,price);
+
+    public Book(String name_of_book, Author obj_of_Author, double price, int qty)
+    {
+        this.name_of_book=name_of_book;
+        this.price=price;
         this.qty=qty;
+        this.authors=obj_of_Author;
     }
-    public String getName(){
-        return name;
+
+    public String getName( )
+    {   System.out.print("Name of book is ");
+        return name_of_book;
     }
-    public Author[] getAuthors(){
-        return A1;
-    }
-    public void setPrice(double price){
-        this.price=price;
-    }
-    public double getPrice(){
+
+    public double getPrice()
+    {
+      System.out.print("price of book is ");
         return price;
     }
-    public int getQty(){
+
+    public void setprice(double price)
+    {
+        this.price=price;
+    }
+
+    public int getQty()
+    {   System.out.print("Books Quantity");
         return qty;
     }
-    public void setQty(int qty){
+
+    public void setqty(int qty)
+    {
         this.qty=qty;
     }
-    public String toString(){
-        return "\"Book[name="+getName()+A1.toString()+" ]\", Price="+ getPrice()+", qty="+ getQty()+" ]\"";
-    } 
-}
 
-//Main.java
+    public void tostring()
+    {
+        System.out.println("Book[name="+name_of_book+" , price="+price+" , qty="+qty);
+        System.out.println("Author[name="+authors.name+" ,Email="+authors.Email+" , Gender="+authors.gender);
+    }
 
-
-public class Main
-{
-	public static void main(String[] args) {
-	    Author Junaid=new Author("Junaid Aslam","junaidaslam.muet@gmail.com",'M');
-	    Book OOP=new Book("OOP",Junaid[2],425.67,2);
-	    System.out.println(OOP.toString());
-	}
+} 
+public class Task2 {
+   public static void main(String[] args)
+   {
+    Author author=new Author("Robert", "lafore@gmail.com",'M');
+    Book book= new Book("Cpp",author,40.25,50);
+    book.tostring();
+   }
+    
 }
