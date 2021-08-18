@@ -40,9 +40,9 @@ public class Class1{
     public Class2 getC21(){
         return C21;
     }
-    public int printAll(){
+    public void printAll(){
         System.out.println("First INT is "+First);
-        System.out.println("A is "+getA()+"B is "+getB()+"C is "+getC());
+        System.out.println("A is "+C21.getA()+"B is "+C21.getB()+"C is "+C21.getC());
     }
 } 
 public class Main
@@ -55,6 +55,6 @@ public class Main
 	    C21.setB(3);
 	    C21.setC(4);
 	    C11.setAll(1,C21);
-		C11.getAll();
+		C11.printAll();
 	}
 }
