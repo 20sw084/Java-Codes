@@ -11,7 +11,7 @@ public class First{
 
 public class Second extends First{
     public Second(){
-        super();
+        super();   //If you didnt provide. compiler automatically use this super statement
         System.out.println("Second Constructor Called.");
     }
 }
