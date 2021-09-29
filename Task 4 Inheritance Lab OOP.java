@@ -1,3 +1,5 @@
+//Shape.java
+
 public abstract class Shape {
     protected String color;
     protected boolean filled;
@@ -29,6 +31,10 @@ public abstract class Shape {
     public abstract double getPerimeter();
     public abstract String toString();
 }
+
+//Circle.java
+
+
 public class Circle extends Shape {
     protected double radius;
     public Circle(){
@@ -57,6 +63,8 @@ public class Circle extends Shape {
         return ("[\"CircleIsFilled="+isFilled()+",ColourIs="+getColor()+",AreaOfCircle="+getArea()+",PerimeterOfCircle="+getPerimeter()+"\"]");
     }
 }
+
+//Rectangle.java
 
 public abstract class Rectangle extends Shape {
     protected double width;
@@ -91,6 +99,8 @@ public abstract class Rectangle extends Shape {
     public abstract String toString();
 }
 
+//Square.java
+
 public class Square extends Rectangle{
     private double side;    
     public Square(){
@@ -119,6 +129,9 @@ public class Square extends Rectangle{
         return ("[\"SquareIsFilled="+isFilled()+",ColourIs="+getColor()+",AreaOfSquare="+getArea()+",PerimeterOfSquare="+getPerimeter()+"\"]");
     }   
 }
+
+//Main4.java
+
 public class Main4 {
     public static void main(String[] args) {
         Square S1=new Square(4.5,"Yellow",true);
