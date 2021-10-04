@@ -17,6 +17,6 @@ public class GUI{
     jf.setVisible(true);
     jf.add(jb);
     jf.add(jl);
-    jf.setDefaultCloseOperation(jf.EXIT_ON_CLOSE);
+    jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
