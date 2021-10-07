@@ -7,7 +7,7 @@ import java.awt.event.*;
     JFrame jf;
     public GUI(){
       jf=new JFrame("Window 1");
-      jf.setLayout(new GridBagLayout());
+      jp.setLayout(new GridBagLayout());
       JPanel jp=new JPanel();
       GridBagConstraints gbc=new GridBagConstraints();
       gbc.gridx=0;
