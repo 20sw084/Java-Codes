@@ -1,5 +1,5 @@
 public class Main{
-    public static void main(String args[]) {
+    public static void main(String args[]){
     int num=50;
     for(int i=1;i<6;i++){
         int First=(int)(50*Math.random());
