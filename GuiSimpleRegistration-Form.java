@@ -32,7 +32,7 @@ public class gui1 extends JFrame implements ActionListener{
         jl2.setBounds(10,70,200,20);
         jl3.setBounds(10,90,200,20);
         jl4.setBounds(10,110,200,20);
-        jl5.setBounds(10,130,200,20);
+        jl5.setBounds(10,130,200,20); 
         jl6.setBounds(10,150,200,20);
         jl7.setBounds(10,170,200,20);
         c.add(jl1);
