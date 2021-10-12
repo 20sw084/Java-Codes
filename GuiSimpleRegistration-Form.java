@@ -1,11 +1,11 @@
-//gui1.java
+//GUI.java
 
 import javax.util.Arrays;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.*;
-public class gui1 extends JFrame implements ActionListener{ 
+public class GUI extends JFrame implements ActionListener{ 
     JFrame jf;
     JLabel jl1,jl2,jl3,jl4,jl5,jl6,jl7;
     JTextField jtf1,jtf2,jtf3,jtf4;
@@ -13,7 +13,7 @@ public class gui1 extends JFrame implements ActionListener{
     JButton jb1,jb2;
     JComboBox jcb;
     Container c;
-    gui1(){
+    GUI(){
         jf=new JFrame("Registration Form"); 
         c=jf.getContentPane();
         jf.setLocation(100,100);
@@ -45,7 +45,7 @@ public class gui1 extends JFrame implements ActionListener{
         jtf1=new JTextField();
         jtf1.setBounds(150,50,150,20);
         c.add(jtf1);
-        String[] str={"Male","Female","Other"};
+        String[] str={"SELECT","Male","Female","Other"};
         jcb=new JComboBox(str);
         jcb.setBounds(150,70,150,20);
         c.add(jcb);
@@ -75,18 +75,29 @@ public class gui1 extends JFrame implements ActionListener{
         jf.setVisible(true);
     }
     public void actionPerformed(ActionEvent ae) { 
-        if(ae.getSource()==jb1){
-        if(!(jpf1.getPassword().equals(jpf2.getPassword())))
+        if(ae.getSource()==jb1)
+        {   String p1 = jpf1.getText();
+        String p2 = jpf2.getText();
+          
+
+        if(p1.equals(p2))
+        {   
             JOptionPane.showMessageDialog(jf,"Registered Succesfully"); 
-        else
-        JOptionPane.showMessageDialog(jf,"Passwords didnt Matched","Alert",JOptionPane.WARNING_MESSAGE);  
+        }
+        else{
+        JOptionPane.showMessageDialog(jf,"Passwords didnt Matched","Alert",JOptionPane.WARNING_MESSAGE);  }
         }
         else if(ae.getSource()==jb2){    
-            new gui1();
+          jtf1.setText(null);
+          jtf2.setText(null);
+          jtf3.setText(null);
+          jtf4.setText(null);
+          jpf1.setText(null);
+          jpf2.setText(null);
+          jcb.setSelectedIndex(0);
         }
     }
 }
-
 //Main.java
 
 public class Main {
