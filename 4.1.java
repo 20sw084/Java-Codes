@@ -1,6 +1,6 @@
 class Main{
 	public static void Cout(String a)
-	{
+	{ 
 		System.out.println(a);
 	}
 	public static void main(String A[]) {
