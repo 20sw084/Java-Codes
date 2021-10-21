@@ -1,17 +1,7 @@
-import java.lang.*;
-import java.text.SimpleDateFormat;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.Vector;
+package Pharamacy_Management_System;
 import javax.swing.*;
-import javax.swing.border.TitledBorder;
-import javax.swing.table.DefaultTableModel;
 
-public class Thread_Task extends Thread 
+public class Multithreading_gui extends Thread 
 {
 	public JFrame frame;
 	int count=0;
@@ -19,25 +9,22 @@ public class Thread_Task extends Thread
 	String  names[] = { "Ali" ,"Ahmad", "Awais", "Musadiq" };
 	String append="";
 	
-	public Thread_Task()
-	{
-		
+	public Multithreading_gui()
+	{		
 		frame = new JFrame("Task");
 		tf1 = new JTextField();
 		tf1.setBounds(20, 50, 300, 20);
-		frame.add(tf1);
-		
-	
-		
+		frame.add(tf1);		
 		frame.setSize(400, 400);// 380 width and 700 height
 		frame.setLayout(null);// using no layout managers
 		frame.setVisible(true);// making the frame visible
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
 	public   void  run() 
 	{ 
 		
-		
+		while(true){
 			for(int i=0; i<names.length; i++)
 			{
 				if(count==0) 
@@ -63,27 +50,17 @@ public class Thread_Task extends Thread
 				
 			}
 
+            append="";
+            count=0;
+            try 
+				{
+					Thread.sleep(2000);
+				}
+				catch(Exception e) {
+					
+				}
 			tf1.setText("");
 		}
-	
+    }
 }
-
-
-//Main.java
-
-
-import javax.swing.JFrame;
-import javax.swing.JTextField;
-
-public class Thread_Task_Main
-{
-
-	public static void main(String[] args)
-	{
-		Thread_Task t1 = new Thread_Task();
-		t1.start();
-	}
-
-}
-
 
