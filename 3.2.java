@@ -1,5 +1,5 @@
 public class Main{
-    public static void main(String args[]) {
+    public static void main(String args[]) {  
     int maxValue = 50;                                                 // The maximum value to be checked.
 
     // Check all values from 2 to maxValue:
