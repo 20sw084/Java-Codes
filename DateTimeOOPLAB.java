@@ -2,7 +2,6 @@ package javalab;
 import java.lang.Thread;
 import javax.swing.*;
 import java.util.Date;
-import java.util.Date;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
