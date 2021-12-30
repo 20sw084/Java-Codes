@@ -1,4 +1,4 @@
-public class Main{ 
+public class Main{  
     public static void main(String[] args){
         int randomChoice=0;
         randomChoice=(int) (6*Math.random());
